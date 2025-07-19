@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.log
+
+# SQLite
+*.sqlite3
+db.sqlite3
+
+# Django migrations cache
+*/migrations/__pycache__/
+*/migrations/*.pyc
+*/migrations/*.pyo
+*/migrations/*.py~
+
+# Environment
+.env
+.env.*
+
+# IDEs
+.vscode/
+.idea/
+
+# OS system files
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
+.docker/
+docker-compose.override.yml
+
+# Coverage
+.coverage
+htmlcov/
+
+# Pytest
+.cache/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Excel and CSV (data files)
+*.xlsx
+*.csv
+
+# Frontend (if any future frontend is added)
+node_modules/
+dist/
+build/
