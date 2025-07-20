@@ -121,21 +121,22 @@ docker-compose run backend python manage.py test
 
 ### 📂 Project Structure
 
-credit-approval-system/  
-├── backend/                  # Django project root  
-│   ├── core/                 # Main app  
-│   │   ├── models.py         # Database models  
-│   │   ├── views.py          # API endpoints  
-│   │   ├── serializers.py    # Data serialization  
-│   │   ├── tests.py          # Unit tests  
-│   │   └── utils.py          # Helper functions (e.g., Excel import)  
-│   ├── config/               # Django settings  
-│   └── data/
-│   │   ├── customer_data.xlsx
-│   │   ├── loan_data.xlsx    # Sample Excel files  
-├── docker-compose.yml        # Multi-container setup  
-├── Dockerfile                # Backend image config  
-└── .env                      # Environment variables  
+credit-approval-system/
+├── backend/
+│ ├── config/
+│ ├── core/
+│ │ ├── models.py
+│ │ ├── views.py
+│ │ ├── serializers.py
+│ │ ├── urls.py
+│ │ ├── tests.py
+│ ├── data/
+│ │ ├── customer_data.xlsx
+│ │ ├── loan_data.xlsx
+├── Dockerfile
+├── docker-compose.yml
+├── .env
+├── .gitignore
 
 ---
 
