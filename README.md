@@ -122,22 +122,22 @@ docker-compose run backend python manage.py test
 
 ### 📂 Project Structure
 
-credit-approval-system/
-├── backend/
-│   ├── config/
-│   ├── core/
-│   │   ├── models.py
-│   │   ├── views.py
-│   │   ├── serializers.py
-│   │   ├── urls.py
-│   │   ├── tests.py
-│   ├── data/
-│   │   ├── customer_data.xlsx
-│   │   ├── loan_data.xlsx
-├── Dockerfile
-├── docker-compose.yml
-├── .env
-├── .gitignore
+    credit-approval-system/
+    ├── backend/
+    │   ├── config/
+    │   ├── core/
+    │   │   ├── models.py
+    │   │   ├── views.py
+    │   │   ├── serializers.py
+    │   │   ├── urls.py
+    │   │   ├── tests.py
+    │   ├── data/
+    │   │   ├── customer_data.xlsx
+    │   │   ├── loan_data.xlsx
+    ├── Dockerfile
+    ├── docker-compose.yml
+    ├── .env
+    ├── .gitignore
 
 ---
 
