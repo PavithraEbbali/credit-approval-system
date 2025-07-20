@@ -122,22 +122,7 @@ docker-compose run backend python manage.py test
 
 ### 📂 Project Structure
 
-credit-approval-system/
-├── backend/
-│   ├── config/
-│   ├── core/
-│   │   ├── models.py
-│   │   ├── views.py
-│   │   ├── serializers.py
-│   │   ├── urls.py
-│   │   ├── tests.py
-│   ├── data/
-│   │   ├── customer_data.xlsx
-│   │   ├── loan_data.xlsx
-├── Dockerfile
-├── docker-compose.yml
-├── .env
-├── .gitignore             
+<pre> ### 📂 Project Structure ``` credit-approval-system/ ├── backend/ │ ├── config/ # Django settings │ ├── core/ # Main Django app │ │ ├── models.py # Database models │ │ ├── views.py # API views │ │ ├── serializers.py # DRF serializers │ │ ├── urls.py # URL routing │ │ ├── tests.py # Unit tests │ ├── data/ │ │ ├── customer_data.xlsx # Sample customer data │ │ ├── loan_data.xlsx # Sample loan data ├── Dockerfile # Backend Docker config ├── docker-compose.yml # Service orchestrator ├── .env # Environment variables ├── .gitignore # Git exclusions ``` </pre>
 
 ---
 
