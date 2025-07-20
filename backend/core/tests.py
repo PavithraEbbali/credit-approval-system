@@ -27,7 +27,6 @@ class CreditSystemTests(APITestCase):
             "approved_limit": 100000
         }
         response = self.client.post(url, data, format='json')
-        print("REGISTER RESPONSE:", response.data)  # 👈 this is what we need to debug it
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
 
