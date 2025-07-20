@@ -29,7 +29,7 @@ class CheckEligibilityView(APIView):
         except Customer.DoesNotExist:
             return Response({"error": "Customer not found"}, status=404)
 
-        # 💡 Credit score calculation
+        # Credit score calculation
         loans = Loan.objects.filter(customer=customer)
         credit_score = 100
 
@@ -50,12 +50,12 @@ class CheckEligibilityView(APIView):
             past_loan_volume = sum(l.loan_amount for l in loans)
             credit_score += min(20, past_loan_volume / 100000)
 
-        # 🧮 Monthly EMI (compound interest)
+        # Monthly EMI (compound interest)
         r = interest_rate / (12 * 100)
         emi = loan_amount * r * ((1 + r)**tenure) / (((1 + r)**tenure) - 1)
         monthly_salary = customer.monthly_salary
 
-        # ❌ Reject if EMI > 50% of salary
+        # Reject if EMI > 50% of salary
         if emi > (0.5 * monthly_salary):
             return Response({
                 "customer_id": customer.customer_id,
@@ -63,7 +63,7 @@ class CheckEligibilityView(APIView):
                 "reason": "EMI exceeds 50% of salary"
             })
 
-        # ✅ Decision based on credit_score
+        # Decision based on credit_score
         corrected_interest = interest_rate
         approval = False
 
@@ -98,7 +98,7 @@ class CreateLoanView(APIView):
         except Customer.DoesNotExist:
             return Response({"error": "Customer not found"}, status=404)
 
-        # 📅 Calculate end_date by adding `tenure` months to today
+        # Calculate end_date by adding `tenure` months to today
         start_date = datetime.today().date()
         end_date = start_date + timedelta(days=30 * int(data["tenure"]))  # approx.
 
@@ -164,7 +164,7 @@ class ViewCustomerDetailsView(APIView):
 
         loans = Loan.objects.filter(customer=customer)
 
-        # --- Credit score logic (reuse) ---
+        # --- Credit score logic ---
         credit_score = 100
 
         if customer.current_debt > customer.approved_limit:
